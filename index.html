@@ -1,103 +1,110 @@
-
 <!DOCTYPE html>
-<!-- Forçar novo deploy -->
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yugena • Conteúdo Técnico em Saúde e Bem-Estar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --verde-claro: #e4f3ec;
+      --verde-médio: #b6ddcc;
+      --verde-escuro: #1c4f38;
+      --texto-suave: #4b6d5a;
+      --sombra: rgba(0, 0, 0, 0.05);
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f6f9f7;
       margin: 0;
       padding: 0;
-      color: #2b3e3c;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--verde-claro);
+      color: var(--texto-suave);
     }
 
     header {
-      background-color: #e0f0e7;
-      padding: 2rem;
+      background-color: var(--verde-médio);
       text-align: center;
-      border-bottom: 2px solid #cde8d4;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid #c3e2d3;
     }
 
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.4rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--verde-escuro);
     }
 
     header p {
-      font-size: 1rem;
-      color: #4d665e;
-      margin: 0 auto;
+      font-size: 1.1rem;
       max-width: 600px;
+      margin: 0 auto;
     }
 
     .articles {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 2rem auto;
-      gap: 1.5rem;
-      max-width: 800px;
-      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .article-card {
-      background-color: white;
-      padding: 1.5rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      width: 100%;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.5rem;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 14px var(--sombra);
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .article-card:hover {
       transform: translateY(-4px);
-    }
-
-    .article-card h2 {
-      font-size: 1.3rem;
-      color: #235e45;
-      margin-bottom: 0.5rem;
-    }
-
-    .article-card p {
-      margin: 0;
-      color: #5f726b;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     .article-card img {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
+      border-radius: 12px;
       object-fit: cover;
-      max-height: 200px;
+      max-height: 180px;
+      margin-bottom: 1rem;
+    }
+
+    .article-card h2 {
+      font-size: 1.2rem;
+      color: var(--verde-escuro);
+      margin: 0 0 0.5rem;
+    }
+
+    .article-card p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #5c7568;
+    }
+
+    .badge-new {
+      background-color: #a2e2c5;
+      color: #165b40;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.4rem;
     }
 
     footer {
       text-align: center;
-      margin: 3rem 0 1rem;
       font-size: 0.9rem;
-      color: #7c8c88;
-    }
-
-    .badge-new {
-      background-color: #a7e1c0;
-      color: #184c36;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-      margin-left: 0.5rem;
+      padding: 2rem 1rem;
+      color: #6a8374;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>🌿 Yugena</h1>
     <p>Conteúdo técnico sobre saúde, bem-estar e longevidade baseado em evidência científica.</p>
@@ -126,6 +133,5 @@
   <footer>
     © 2025 Yugena. Conteúdo técnico e bem-estar com propósito.
   </footer>
-
 </body>
 </html>
