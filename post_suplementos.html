@@ -319,6 +319,34 @@
             <strong>Transparência Yugena:</strong> Este conteúdo foi desenvolvido com base em evidências científicas atuais e tem caráter educativo. As informações apresentadas não substituem a orientação de profissionais de saúde qualificados. Sempre consulte um médico ou nutricionista antes de iniciar qualquer protocolo de suplementação.
         </div>
 
+        <!-- 🔥 SCRIPT DE SCROLL COM OFFSET -->
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetID = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetID);
+                    if (target) {
+                        e.preventDefault();
+                        const headerOffset = 100; // ajuste da distância do topo (em px)
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+
+
+        <div class="transparency-message">
+            <strong>Transparência Yugena:</strong> Este conteúdo foi desenvolvido com base em evidências científicas atuais e tem caráter educativo. As informações apresentadas não substituem a orientação de profissionais de saúde qualificados. Sempre consulte um médico ou nutricionista antes de iniciar qualquer protocolo de suplementação.
+        </div>
+
 
         <h2 id="tabela">Tabela Comparativa dos 4 Suplementos</h2>
         <div class="table-container">
